@@ -1,5 +1,5 @@
 import { Card, Center, Code, Description, Grid, Main } from "@/app/style";
-import { StyledButton } from './style'
+import { StyledButton } from "./style";
 
 export default function Home() {
   return (
