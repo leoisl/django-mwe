@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import FormView, DetailView
 from django.urls import reverse
 from .forms import EchoForm
@@ -7,7 +7,7 @@ from .models import Message
 
 def home(request):
     return HttpResponse("<a href='echo_static/'>Go to echo static.</a><br/>"
-                        "<a href='echo_dynamic/'>Go to echo dynamic.</a>")
+                        "<a href='localhost:3000/'>Go to echo dynamic.</a>")
 
 
 class EchoStaticView(FormView):
@@ -26,6 +26,3 @@ class MessageView(DetailView):
     model = Message
     template_name = 'message.html'
 
-
-def echo_dynamic(request):
-    return HttpResponse("TODO: Implement echo_dynamic view.")
