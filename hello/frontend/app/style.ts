@@ -10,7 +10,7 @@ export const StyledButton = styled(Button)`
 
 export const Description = styled.div`
   display: inherit;
-  justify-content: inherit;
+  justify-content: start;
   align-items: inherit;
   font-size: 0.85rem;
   width: 100%;
@@ -81,8 +81,7 @@ export const Center = styled.div`
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: start;
   padding: 6rem;
   min-height: 100vh;
 
