@@ -28,3 +28,7 @@ def get_message(request, id):
 def get_all_messages(request):
     all_messages = list(Message.objects.all().values('id', 'message'))
     return JsonResponse(all_messages, safe=False)
+
+
+def health(request):
+    return HttpResponse()
