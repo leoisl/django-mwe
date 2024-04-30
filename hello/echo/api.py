@@ -1,7 +1,23 @@
-from django.http import JsonResponse
-from django.core import serializers
+from django.http import JsonResponse, HttpResponse
+from rest_framework.views import APIView
 
 from .models import Message
+
+
+class AddMessage(APIView):
+    def post(self, request):
+        msg = request.POST.get('message', 'default')
+        Message.objects.create(message=msg)
+        return HttpResponse()
+
+
+class EditMessage(APIView):
+    def post(self, request):
+        msg = request.POST.get('message', 'default')
+        obj = Message.objects.get(pk=request.POST.get('id'))
+        obj.message = msg
+        obj.save()
+        return HttpResponse()
 
 
 def get_message(request, id):
