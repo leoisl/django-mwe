@@ -22,11 +22,5 @@ jobs:
             "context": ".",
             "dockerfile": "Dockerfile",
             "platform": "linux/arm64"
-          },
-          {
-            "name": "frontend",
-            "context": "./hello/frontend",
-            "dockerfile": "Dockerfile",
-            "platform": "linux/arm64"
           }
         ]

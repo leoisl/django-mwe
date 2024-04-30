@@ -3,7 +3,7 @@ services:
     image:
       tag: sha-00000000
     replicaCount: 1
-  frontend:
-    image:
-      tag: sha-00000000
-    replicaCount: 1
+  #frontend:
+  #  image:
+  #    tag: sha-00000000
+  #  replicaCount: 1

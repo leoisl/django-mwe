@@ -1,31 +1,31 @@
 global:
-  replicaCount: 5
+  replicaCount: 1
   autoscaling:
     enabled: false
 services:
-  frontend:
-    image:
-      repository: 533267185808.dkr.ecr.us-west-2.amazonaws.com/core-platform/django-mwe/frontend
-    livenessProbe:
-      httpGet:
-        path: /experiment/health
-    readinessProbe:
-      httpGet:
-        path: /experiment/health
-    service:
-      port: 3000
-    resources:
-      limits:
-        cpu: 4
-        memory: 4Gi
-      requests:
-        cpu: 2
-        memory: 2Gi
-    ingress:
-      hosts:
-        - paths:
-          - path: /experiment
-            pathType: Prefix
+  #frontend:
+  #  image:
+  #    repository: 533267185808.dkr.ecr.us-west-2.amazonaws.com/core-platform/django-mwe/frontend
+  #  livenessProbe:
+  #    httpGet:
+  #      path: /experiment/health
+  #  readinessProbe:
+  #    httpGet:
+  #      path: /experiment/health
+  #  service:
+  #    port: 3000
+  #  resources:
+  #    limits:
+  #      cpu: 4
+  #      memory: 4Gi
+  #    requests:
+  #      cpu: 2
+  #      memory: 2Gi
+  #  ingress:
+  #    hosts:
+  #      - paths:
+  #        - path: /experiment
+  #          pathType: Prefix
   backend:
     image:
       repository: 533267185808.dkr.ecr.us-west-2.amazonaws.com/core-platform/django-mwe/backend
