@@ -1,0 +1,29 @@
+global:
+  replicaCount: 5
+  autoscaling:
+    enabled: false
+  service:
+    port: 5000
+  livenessProbe:
+    httpGet:
+      path: /health
+  readinessProbe:
+    httpGet:
+      path: /health
+services:
+  web:
+    image:
+      repository: 533267185808.dkr.ecr.us-west-2.amazonaws.com/core-platform/django-mwe/web
+    resources:
+      limits:
+        cpu: 4
+        memory: 4Gi
+      requests:
+        cpu: 2
+        memory: 2Gi
+    ingress:
+      hosts:
+        - paths:
+          - path: /
+            pathType: Prefix
+
