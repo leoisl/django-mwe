@@ -16,5 +16,5 @@ jobs:
       - name: Create Stack
         uses: chanzuckerberg/argus-artifacts/ci/packages/create-stack@v0.8.0
         with:
-          appName: single-cell-explorer
+          appName: django-mwe
           envName: rdev
