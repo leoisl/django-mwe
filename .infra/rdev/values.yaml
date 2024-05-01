@@ -1,9 +1,9 @@
 services:
   backend:
     image:
-      tag: sha-00000000
+      tag: sha-2b49731
     replicaCount: 1
   #frontend:
   #  image:
-  #    tag: sha-00000000
+  #    tag: sha-2b49731
   #  replicaCount: 1
