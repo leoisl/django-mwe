@@ -20,6 +20,7 @@ jobs:
       pk: ${{ secrets.CZI_GITHUB_HELPER_PK }}
     with:
       env: rdev
+      ecr_root_path: ./.infra/ecr
       images: |
         [
           {
