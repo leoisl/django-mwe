@@ -15,8 +15,11 @@ jobs:
       id-token: write
       contents: read
     uses: chanzuckerberg/github-actions/.github/workflows/argus-docker-build.yaml@heathj/docker-build-runson
+    
     secrets: inherit
     with:
+      app_id: ${{secrets.CZI_GITHUB_HELPER_APP_ID}}
+      pk: ${{secrets.CZI_GITHUB_HELPER_PK}}
       env: rdev
       images: |
         [
