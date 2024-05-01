@@ -7,7 +7,7 @@ from .models import Message
 
 def home(request):
     return HttpResponse("<a href='echo_static/'>Go to echo static.</a><br/>"
-                        "<a href='localhost:3000/'>Go to echo dynamic.</a>")
+                        "<a href='http://localhost:3000/'>Go to echo dynamic.</a>")
 
 
 class EchoStaticView(FormView):
