@@ -68,7 +68,7 @@ const typography = {
     body: {
       button: {
         fontSize: 14,
-        fontWeight: fontWeights.medium,
+        fontWeight: fontWeights.regular,
         letterSpacing: "0px",
         lineHeight: "20px",
         textTransform: "none" as const,
