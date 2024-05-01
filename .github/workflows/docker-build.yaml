@@ -11,7 +11,10 @@ on:
 
 jobs:
   argus_builder:
-    uses: chanzuckerberg/github-actions/.github/workflows/argus-docker-build.yaml@v2.6.0
+    permissions:
+      id-token: write
+      contents: read
+    uses: chanzuckerberg/github-actions/.github/workflows/argus-docker-build.yaml@heathj/docker-build-runson
     secrets: inherit
     with:
       env: rdev
